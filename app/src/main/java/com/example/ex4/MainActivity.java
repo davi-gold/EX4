@@ -23,10 +23,12 @@ public class MainActivity extends AppCompatActivity {
         String port = editTextPort.getText().toString();
 
         connectToServer(ip, port);
+
+
+
     }
 
     private void connectToServer(String ip, String port){
-
 
 
     }
