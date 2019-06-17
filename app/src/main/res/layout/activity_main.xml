@@ -8,7 +8,7 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView7"
+        android:id="@+id/ip_text_view"
         android:layout_width="wrap_content"
         android:layout_height="49dp"
         android:layout_marginStart="8dp"
@@ -19,7 +19,7 @@
         android:layout_marginBottom="8dp"
         android:text="IP:"
         android:textColor="#FFFFFF"
-        android:textSize="28dp"
+        android:textSize="28sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.15"
@@ -28,7 +28,7 @@
         app:layout_constraintVertical_bias="0.112" />
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/port_text_view"
         android:layout_width="66dp"
         android:layout_height="46dp"
         android:layout_marginStart="8dp"
@@ -39,7 +39,7 @@
         android:layout_marginBottom="8dp"
         android:text="Port:"
         android:textColor="#FFFFFF"
-        android:textSize="28dp"
+        android:textSize="28sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.083"
@@ -48,7 +48,7 @@
         app:layout_constraintVertical_bias="0.2" />
 
     <EditText
-        android:id="@+id/editText6"
+        android:id="@+id/ip_edit_text"
         android:layout_width="236dp"
         android:layout_height="42dp"
         android:layout_marginStart="8dp"
@@ -68,7 +68,7 @@
         app:layout_constraintVertical_bias="0.112" />
 
     <EditText
-        android:id="@+id/editText8"
+        android:id="@+id/port_edit_text"
         android:layout_width="236dp"
         android:layout_height="42dp"
         android:layout_marginStart="8dp"
@@ -88,7 +88,7 @@
         app:layout_constraintVertical_bias="0.204" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/connect_button"
         android:layout_width="182dp"
         android:layout_height="59dp"
         android:layout_marginStart="8dp"
@@ -98,6 +98,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:background="#87CC48"
+        android:onClick="onClickConnect"
         android:text="connect"
         android:textColor="#FFFFFF"
         android:textColorHighlight="#000000"
