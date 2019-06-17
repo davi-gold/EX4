@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         String ip = editTextIp.getText().toString();
         String port = editTextPort.getText().toString();
 
-        connectToServer(ip, port);
+      //  connectToServer(ip, port);
 
         Intent intent = new Intent(this, DisplayJoystick.class);
         startActivity(intent);
