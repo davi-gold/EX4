@@ -8,8 +8,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
-import static java.lang.Thread.sleep;
-
 public class MainActivity extends AppCompatActivity {
 
     @Override

@@ -1,31 +1,30 @@
 package com.example.ex4;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 
 
-public class DisplayJoystick extends AppCompatActivity implements JoystickView.JoystickListener {
+public class DisplayJoystick extends AppCompatActivity implements Joystick.JoystickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        JoystickView joystick = new JoystickView(this);
         setContentView(R.layout.joystick);
     }
 
     @Override
-    public void onJoystickMoved(float xPercent, float yPercent) {
+    public void onJoystick(float xP, float yP) {
 
-                if (xPercent > 0.999)
-                    xPercent = 1;
-                if (yPercent > 0.999)
-                    yPercent = 1;
-                if (xPercent < -0.999)
-                    xPercent = -1;
-                if (yPercent < -0.999)
-                    yPercent = -1;
+                // normalization
+                if (xP > 0.999)
+                    xP = 1;
+                if (yP > 0.999)
+                    yP = 1;
+                if (xP < -0.999)
+                    xP = -1;
+                if (yP < -0.999)
+                    yP = -1;
 
-                TcpClient.getInstance().sendMessage("set /controls/flight/elevator " + yPercent);
-                TcpClient.getInstance().sendMessage("set /controls/flight/aileron " + xPercent);
+                TcpClient.getInstance().sendMessage("set /controls/flight/elevator " + yP);
+                TcpClient.getInstance().sendMessage("set /controls/flight/aileron " + xP);
         }
     }

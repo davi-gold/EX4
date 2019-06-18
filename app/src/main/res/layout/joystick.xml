@@ -11,8 +11,8 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="com.example.ex4.DisplayJoystick">
 
-    <com.example.ex4.JoystickView
-        android:id="@+id/joystickRight"
+    <com.example.ex4.Joystick
+        android:id="@+id/joystick"
         android:layout_width="wrap_content"
         android:layout_height="300dp"
         android:layout_weight="1" />

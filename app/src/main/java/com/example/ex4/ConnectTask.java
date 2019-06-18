@@ -1,6 +1,4 @@
 package com.example.ex4;
-
-
 import android.os.AsyncTask;
 import android.util.Log;
 
