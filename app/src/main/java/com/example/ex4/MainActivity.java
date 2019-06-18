@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         String ip = editTextIp.getText().toString();
         String port = editTextPort.getText().toString();
 
-      //  connectToServer(ip, port);
+        connectToServer(ip, port);
 
         Intent intent = new Intent(this, DisplayJoystick.class);
         startActivity(intent);
@@ -38,30 +38,4 @@ public class MainActivity extends AppCompatActivity {
         ConnectTask con = new ConnectTask(tcp_client);
         con.execute();
     }
-
-
-
-
-
-
-    private String elevator;
-    private String aileron;
-
-    public void sendData(String data){
-        try {
-            sleep(1);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        setAileron("50");
-    }
-
-    public void setElevator(String elev) {
-        TcpClient.getInstance().sendMessage("set /controls/flight/elevator " + elev);
-    }
-
-    public void setAileron(String ail){
-        TcpClient.getInstance().sendMessage("set /controls/flight/aileron " + ail);
-    }
-
 }

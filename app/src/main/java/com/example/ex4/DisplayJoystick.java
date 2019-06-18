@@ -25,8 +25,6 @@ public class DisplayJoystick extends AppCompatActivity implements JoystickView.J
                 if (yPercent < -0.999)
                     yPercent = -1;
 
-                Log.d("Joystick", "X percent: " + xPercent + " Y percent: " + yPercent);
-
                 TcpClient.getInstance().sendMessage("set /controls/flight/elevator " + yPercent);
                 TcpClient.getInstance().sendMessage("set /controls/flight/aileron " + xPercent);
         }
